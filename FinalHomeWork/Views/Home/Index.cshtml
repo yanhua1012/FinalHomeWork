@@ -8,6 +8,13 @@
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
+@{
+    bool isLogin = ViewData.ContainsKey("IsLogin") && Convert.ToBoolean(ViewData["IsLogin"]);
+    if (isLogin)
+    {
+        <h1 style="color:blue">您已成功登入</h1>
+    }
+}
 <div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
